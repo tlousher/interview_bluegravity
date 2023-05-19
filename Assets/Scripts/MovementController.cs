@@ -13,6 +13,9 @@ public class MovementController : MonoBehaviour
     private bool _moving;
     private readonly List<Vector2> _directions = new List<Vector2>();
     private Rigidbody2D _rigidbody;
+    
+    // List of the objects that blocks the movements of the character.
+    public static List<string> CanMove = new List<string>();
 
     public void Start()
     {
@@ -27,6 +30,7 @@ public class MovementController : MonoBehaviour
 
     public void Update()
     {
+        if (CanMove.Count > 0) return;
         SetDirection();
         Move();
     }
