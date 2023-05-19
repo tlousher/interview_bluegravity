@@ -44,38 +44,38 @@ public class MovementController : MonoBehaviour
         var addedDirection = true;
 
         // Control if a key has been pressed.
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             direction = Vector2.left;
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.D))
         {
             direction = Vector2.right;
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.W))
         {
             direction = Vector2.up;
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.S))
         {
             direction = Vector2.down;
         }
         else addedDirection = false;
 
         // Control if a key has been released.
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.A))
         {
             _directions.Remove(Vector2.left);
         }
-        else if (Input.GetKeyUp(KeyCode.RightArrow))
+        else if (Input.GetKeyUp(KeyCode.D))
         {
             _directions.Remove(Vector2.right);
         }
-        else if (Input.GetKeyUp(KeyCode.UpArrow))
+        else if (Input.GetKeyUp(KeyCode.W))
         {
             _directions.Remove(Vector2.up);
         }
-        else if (Input.GetKeyUp(KeyCode.DownArrow))
+        else if (Input.GetKeyUp(KeyCode.S))
         {
             _directions.Remove(Vector2.down);
         }
@@ -98,22 +98,22 @@ public class MovementController : MonoBehaviour
 
         var direction = Vector2.zero;
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             direction += Vector2.left;
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             direction += Vector2.right;
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
         {
             direction += Vector2.up;
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S))
         {
             direction += Vector2.down;
         }
