@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Assets.HeroEditor4D.Common.Scripts.CharacterScripts;
 using Assets.HeroEditor4D.Common.Scripts.Enums;
@@ -13,8 +14,16 @@ namespace Controllers
         public int movementSpeed;
 
         private bool _moving;
-        private readonly List<Vector2> _directions = new List<Vector2>();
+        private List<Directions> _directions = new ();
         private Rigidbody2D _rigidbody;
+        
+        private enum Directions
+        {
+            Up,
+            Down,
+            Left,
+            Right
+        }
     
         // List of the objects that blocks the movements of the character.
         public static List<string> CanMove = new List<string>();
@@ -42,53 +51,60 @@ namespace Controllers
         /// </summary>
         private void SetDirection()
         {
-            var direction = character.Direction;
-            var addedDirection = true;
-
             // Control if a key has been pressed.
             if (Input.GetKeyDown(KeyCode.A))
             {
-                direction = Vector2.left;
+                _directions.Add(Directions.Left);
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D))
             {
-                direction = Vector2.right;
+                _directions.Add(Directions.Right);
             }
-            else if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W))
             {
-                direction = Vector2.up;
+                _directions.Add(Directions.Up);
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S))
             {
-                direction = Vector2.down;
+                _directions.Add(Directions.Down);
             }
-            else addedDirection = false;
 
             // Control if a key has been released.
             if (Input.GetKeyUp(KeyCode.A))
             {
-                _directions.Remove(Vector2.left);
+                _directions.RemoveAll(x => x == Directions.Left);
             }
-            else if (Input.GetKeyUp(KeyCode.D))
+            if (Input.GetKeyUp(KeyCode.D))
             {
-                _directions.Remove(Vector2.right);
+                _directions.RemoveAll(x => x == Directions.Right);
             }
-            else if (Input.GetKeyUp(KeyCode.W))
+            if (Input.GetKeyUp(KeyCode.W))
             {
-                _directions.Remove(Vector2.up);
+                _directions.RemoveAll(x => x == Directions.Up);
             }
-            else if (Input.GetKeyUp(KeyCode.S))
+            if (Input.GetKeyUp(KeyCode.S))
             {
-                _directions.Remove(Vector2.down);
+                _directions.RemoveAll(x => x == Directions.Down);
             }
-            else if (!addedDirection) return;
-
-            if (addedDirection)
-            {
-                _directions.Add(direction);
-            }
+            
             // Set the direction to the character.
-            character.SetDirection(_directions.Count > 0 ? _directions.Last() : direction);
+            if (_directions.Count <= 0) return;
+            var dir = _directions.Last();
+            switch (dir)
+            {
+                case Directions.Up:
+                    character.SetDirection(Vector2.up);
+                    break;
+                case Directions.Down:
+                    character.SetDirection(Vector2.down);
+                    break;
+                case Directions.Left:
+                    character.SetDirection(Vector2.left);
+                    break;
+                case Directions.Right:
+                    character.SetDirection(Vector2.right);
+                    break;
+            }
         }
 
         /// <summary>
