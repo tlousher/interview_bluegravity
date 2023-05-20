@@ -29,7 +29,6 @@ namespace Controllers
             total = 0;
             totalText.text = $"{total}";
             money = int.Parse(moneyText.text);
-            dialog.Write("Welcome to the shop! Feel free to browse our selection of items.");
         }
 
         public void Open()
@@ -37,6 +36,7 @@ namespace Controllers
             _canvas.enabled = true;
             MovementController.CanMove.Add("Shop");
             OpenTab("BodyArmor");
+            dialog.Write("Welcome to the shop! Feel free to browse our selection of items.");
         }
 
         public void Close()
