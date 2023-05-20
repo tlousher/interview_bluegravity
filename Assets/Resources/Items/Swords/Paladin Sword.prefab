@@ -115,5 +115,8 @@ MonoBehaviour:
     name: Paladin sword
     description: Everyone will fear your power.
     price: 50
-    sprite: {fileID: 21300000, guid: a0c9f2ed6e7ec9741ad57ca827cfc5a5, type: 3}
+    sprites:
+    - {fileID: 21300000, guid: a0c9f2ed6e7ec9741ad57ca827cfc5a5, type: 3}
+    - {fileID: 21300000, guid: 693423ff18a7cf343a9accf8f64ce8c9, type: 3}
+    itemType: 3
     rarity: 5

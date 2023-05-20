@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Items;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -28,6 +29,7 @@ namespace Controllers
             total = 0;
             totalText.text = $"{total}";
             money = int.Parse(moneyText.text);
+            dialog.Write("Welcome to the shop! Feel free to browse our selection of items.");
         }
 
         public void Open()
@@ -118,7 +120,7 @@ namespace Controllers
             if (money < total)
             {
                 dialog.Write("You don't have enough money!");
-                dialog.DelayedWrite("Do yo need anything else?", 3);
+                dialog.DelayedWrite("I don't think you may need more...", 3);
                 return;
             }
             foreach (var item in _cart)
@@ -131,6 +133,9 @@ namespace Controllers
             total = 0;
             totalText.text = $"{total}";
             RefreshCart();
+            
+            dialog.Write("Thanks, enjoy!");
+            dialog.DelayedWrite("Do yo need anything else?", 3);
         }
     }
 }

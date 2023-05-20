@@ -115,5 +115,13 @@ MonoBehaviour:
     name: Bandit boots
     description: Not too great but it will do.
     price: 10
-    sprite: {fileID: 21300000, guid: b4da06a1973d0684c81a3db0352b8326, type: 3}
+    sprites:
+    - {fileID: 21300000, guid: b4da06a1973d0684c81a3db0352b8326, type: 3}
+    - {fileID: 21300060, guid: 932eb8d5023602e45bd0f3d4e1206516, type: 3}
+    - {fileID: 21300046, guid: 932eb8d5023602e45bd0f3d4e1206516, type: 3}
+    - {fileID: 21300056, guid: 932eb8d5023602e45bd0f3d4e1206516, type: 3}
+    - {fileID: 21300032, guid: 932eb8d5023602e45bd0f3d4e1206516, type: 3}
+    - {fileID: 21300048, guid: 932eb8d5023602e45bd0f3d4e1206516, type: 3}
+    - {fileID: 21300054, guid: 932eb8d5023602e45bd0f3d4e1206516, type: 3}
+    itemType: 1
     rarity: 1

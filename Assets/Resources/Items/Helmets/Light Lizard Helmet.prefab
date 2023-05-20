@@ -115,5 +115,10 @@ MonoBehaviour:
     name: Light lizard helmet
     description: You will feel like the king of the blue lizards.
     price: 25
-    sprite: {fileID: 21300000, guid: a53014f661771aa48873b3c2d0c58923, type: 3}
+    sprites:
+    - {fileID: 21300000, guid: a53014f661771aa48873b3c2d0c58923, type: 3}
+    - {fileID: 21300024, guid: eab67feb3a7b1f040803f2031272cd74, type: 3}
+    - {fileID: 21300036, guid: eab67feb3a7b1f040803f2031272cd74, type: 3}
+    - {fileID: 21300082, guid: eab67feb3a7b1f040803f2031272cd74, type: 3}
+    itemType: 2
     rarity: 3

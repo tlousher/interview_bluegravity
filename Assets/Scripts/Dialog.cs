@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dialog : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    public float writingSpeed = 0.1f;
+    public float writingSpeed = 0.05f;
     
     private bool _isWriting;
     

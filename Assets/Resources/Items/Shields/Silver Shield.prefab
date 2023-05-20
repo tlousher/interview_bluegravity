@@ -115,5 +115,9 @@ MonoBehaviour:
     name: Silver shield
     description: Even a dragon won't pierce this shield.
     price: 50
-    sprite: {fileID: 21300000, guid: f09c8a7e176063c43b5963f9e5f3a1b1, type: 3}
+    sprites:
+    - {fileID: 21300000, guid: f09c8a7e176063c43b5963f9e5f3a1b1, type: 3}
+    - {fileID: 21300002, guid: 0d1428677cab1bc4195ae160f0342454, type: 3}
+    - {fileID: 21300000, guid: 0d1428677cab1bc4195ae160f0342454, type: 3}
+    itemType: 4
     rarity: 5

@@ -115,5 +115,10 @@ MonoBehaviour:
     name: Silver knight helmet
     description: Made by the best blacksmith in the royal palace.
     price: 50
-    sprite: {fileID: 21300000, guid: 4ed9ae50a49918144ab445a3149128a7, type: 3}
+    sprites:
+    - {fileID: 21300000, guid: 4ed9ae50a49918144ab445a3149128a7, type: 3}
+    - {fileID: 21300024, guid: 3c29013c004acd84cbcb0df07e316b7c, type: 3}
+    - {fileID: 21300036, guid: 3c29013c004acd84cbcb0df07e316b7c, type: 3}
+    - {fileID: 21300082, guid: 3c29013c004acd84cbcb0df07e316b7c, type: 3}
+    itemType: 2
     rarity: 5

@@ -115,5 +115,13 @@ MonoBehaviour:
     name: Silver knight boots
     description: Made by the best blacksmith in the royal palace.
     price: 50
-    sprite: {fileID: 21300000, guid: 017d7c7b75d2d2446b5e85ee85fefc39, type: 3}
+    sprites:
+    - {fileID: 21300000, guid: 017d7c7b75d2d2446b5e85ee85fefc39, type: 3}
+    - {fileID: 21300060, guid: 3c29013c004acd84cbcb0df07e316b7c, type: 3}
+    - {fileID: 21300046, guid: 3c29013c004acd84cbcb0df07e316b7c, type: 3}
+    - {fileID: 21300090, guid: 3c29013c004acd84cbcb0df07e316b7c, type: 3}
+    - {fileID: 21300032, guid: 3c29013c004acd84cbcb0df07e316b7c, type: 3}
+    - {fileID: 21300048, guid: 3c29013c004acd84cbcb0df07e316b7c, type: 3}
+    - {fileID: 21300088, guid: 3c29013c004acd84cbcb0df07e316b7c, type: 3}
+    itemType: 1
     rarity: 5
